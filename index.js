@@ -15,7 +15,6 @@ function findTheVowels(string) {
   const returnTheVowels = []
   const vowels = 'aeiou'
   const arrayOfTheString = string.split("")
-  console.log(arrayOfTheString);
   for (let i = 0; i < arrayOfTheString.length; i++) {
     if (vowels.includes(arrayOfTheString[i])) {
       returnTheVowels.push(arrayOfTheString[i])
@@ -24,3 +23,13 @@ function findTheVowels(string) {
 }
 
 console.log(findTheVowels('qeinvqrvjmrc'));
+
+// Ex 4
+
+function fibonacciSequence(entry) {
+  let returnFibonacci = 0
+  const fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233]
+  return fibonacci[entry]
+}
+
+console.log(fibonacciSequence(3));
