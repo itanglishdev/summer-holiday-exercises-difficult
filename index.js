@@ -48,3 +48,30 @@ function fibonacciSequenceVTwo(entry) {
 
 console.log("V2", fibonacciSequenceVTwo(0));
 
+// ex 5
+
+function anagram(wordOne, wordTwo) {
+
+  if (wordOne.length !== wordTwo.length) {
+    return false
+  } else {
+    const wordOneArray = wordOne.split("")
+    const wordTwoArray = wordTwo.split("")
+
+    let letterCounter = 0
+    for (let i = 0; i < wordOneArray.length; i++) {
+      for (let j = 0; j < wordTwoArray.length; j++) {
+        if (wordOneArray[i] === wordTwoArray[j]) {
+          letterCounter++
+
+        }
+      }
+    } if (wordOneArray.length === letterCounter) {
+      console.log(letterCounter);
+      return true
+    } return false
+  }
+
+}
+
+console.log(anagram("ginly", "lying"));
