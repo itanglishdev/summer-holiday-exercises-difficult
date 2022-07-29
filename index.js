@@ -32,4 +32,19 @@ function fibonacciSequence(entry) {
   return fibonacci[entry]
 }
 
-console.log(fibonacciSequence(3));
+console.log("V1", fibonacciSequence(0));
+
+function fibonacciSequenceVTwo(entry) {
+  const fibonacci = [0, 1]
+
+  if (entry !== 0) {
+    for (let i = 1; i <= entry; i++) {
+      let outcome = fibonacci[i - 1] + fibonacci[i]
+      fibonacci.push(outcome)
+    } return fibonacci[entry]
+
+  } return entry
+}
+
+console.log("V2", fibonacciSequenceVTwo(0));
+
